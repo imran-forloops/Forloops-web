@@ -1,0 +1,42 @@
+/* flaticon.css */
+
+@font-face {
+  font-family: "flaticon";
+  src: url("../fonts/fa-solid-900.ttf") format("truetype"),
+    url("../fonts/fa-brands-400.woff") format("woff"),
+    url("../fonts/fa-duotone-900.woff2") format("woff2"),
+    url("../fonts/fa-regular-400.eot") format("embedded-opentype"),
+    /* url("../fonts/fa-light-300.svg") format("svg"); */
+}
+/* 
+@font-face {
+  font-family: "FontAwesomeLight";
+  src: url("../fonts/fa-light-300.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+} */
+
+/* Example usage */
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+  font-family: "flaticon" !important;
+  font-style: normal;
+  font-weight: normal !important;
+}
+
+/* Icon definitions */
+.flaticon-vector:before {
+  content: "\f101";
+}
+.flaticon-medal:before {
+  content: "\f102";
+}
+.flaticon-app-development:before {
+  content: "\f103";
+}
+.flaticon-programming:before {
+  content: "\f104";
+}
+.flaticon-repairing-service:before {
+  content: "\f105";
+}
