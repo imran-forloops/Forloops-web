@@ -4,14 +4,14 @@ import React from "react";
 const Home_content = () => {
   return (
     <>
-      <div class="tp-offcanvas-area">
-        <div class="tpoffcanvas">
-          <div class="tpoffcanvas__close-btn">
-            <button class="close-btn">
-              <i class="fal fa-times"></i>
+      <div className="tp-offcanvas-area">
+        <div className="tpoffcanvas">
+          <div className="tpoffcanvas__close-btn">
+            <button className="close-btn">
+              <i className="fal fa-times"></i>
             </button>
           </div>
-          <div class="tpoffcanvas__logo">
+          <div className="tpoffcanvas__logo">
             <a href="index.html">
               <Image
                 src="/img/logo/logo-white.png"
@@ -21,45 +21,45 @@ const Home_content = () => {
               />
             </a>
           </div>
-          <div class="tpoffcanvas__text">
+          <div className="tpoffcanvas__text">
             <p>Amplify Your Success, Forloops Unlocks the Power of AI!</p>
             <p>
               Transforming businesses through custom AI, Generative AI, and
               Machine-learning solutions for growth and efficiency.
             </p>
           </div>
-          <div class="mobile-menu"></div>
-          <div class="tpoffcanvas__info">
-            <h3 class="offcanva-title">Get In Touch</h3>
-            <div class="tp-info-wrapper mb-20 d-flex align-items-center">
-              <div class="tpoffcanvas__info-icon">
+          <div className="mobile-menu"></div>
+          <div className="tpoffcanvas__info">
+            <h3 className="offcanva-title">Get In Touch</h3>
+            <div className="tp-info-wrapper mb-20 d-flex align-items-center">
+              <div className="tpoffcanvas__info-icon">
                 <a href="#">
-                  <i class="fal fa-envelope"></i>
+                  <i className="fal fa-envelope"></i>
                 </a>
               </div>
-              <div class="tpoffcanvas__info-address">
+              <div className="tpoffcanvas__info-address">
                 <span>Email</span>
                 <a href="mailto:info@forloops.co">info@forloops.co</a>
               </div>
             </div>
-            <div class="tp-info-wrapper mb-20 d-flex align-items-center">
-              <div class="tpoffcanvas__info-icon">
+            <div className="tp-info-wrapper mb-20 d-flex align-items-center">
+              <div className="tpoffcanvas__info-icon">
                 <a href="#">
-                  <i class="fal fa-phone-alt"></i>
+                  <i className="fal fa-phone-alt"></i>
                 </a>
               </div>
-              <div class="tpoffcanvas__info-address">
+              <div className="tpoffcanvas__info-address">
                 <span>Phone</span>
                 <a href="tel:+923218414635">+92-321-8414635</a>
               </div>
             </div>
-            <div class="tp-info-wrapper mb-20 d-flex align-items-center">
-              <div class="tpoffcanvas__info-icon">
+            <div className="tp-info-wrapper mb-20 d-flex align-items-center">
+              <div className="tpoffcanvas__info-icon">
                 <a href="#">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i className="fas fa-map-marker-alt"></i>
                 </a>
               </div>
-              <div class="tpoffcanvas__info-address">
+              <div className="tpoffcanvas__info-address">
                 <span>Location</span>
                 <a
                   href="https://www.google.com/maps/place/701+Tillery+St+12+1646,+Austin,+TX+78702,+USA/"
@@ -72,21 +72,21 @@ const Home_content = () => {
               </div>
             </div>
           </div>
-          <div class="tpoffcanvas__social">
-            <div class="social-icon">
+          <div className="tpoffcanvas__social">
+            <div className="social-icon">
               <a href="https://www.linkedin.com/company/98603088/">
-                <i class="fab fa-linkedin"></i>
+                <i className="fab fa-linkedin"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="body-overlay"></div>
+      <div className="body-overlay"></div>
       <main>
         {/* <!-- tp-slider-area-start --> */}
-        <div class="tp-hero__area pt-100 pb-80 p-relative">
+        <div className="tp-hero__area pt-100 pb-80 p-relative">
           <div
-            class="tp-hero__shape-3-1 wow tpfadeUp"
+            className="tp-hero__shape-3-1 wow tpfadeUp"
             data-wow-duration=".9s"
             data-wow-delay=".7s"
           >
@@ -98,7 +98,7 @@ const Home_content = () => {
             />
           </div>
           <div
-            class="tp-hero__shape-3-2 wow tpfadeUp"
+            className="tp-hero__shape-3-2 wow tpfadeUp"
             data-wow-duration=".9s"
             data-wow-delay=".9s"
           >
@@ -109,19 +109,19 @@ const Home_content = () => {
               alt="shape"
             />
           </div>
-          <div class="container">
-            <div class="row align-items-start">
-              <div class="col-xl-6 col-lg-6">
-                <div class="tp-hero__content-box">
+          <div className="container">
+            <div className="row align-items-start">
+              <div className="col-xl-6 col-lg-6">
+                <div className="tp-hero__content-box">
                   <h3
-                    class="tp-hero__title-lg pb-20 theme-color wow tpfadeUp"
+                    className="tp-hero__title-lg pb-20 theme-color wow tpfadeUp"
                     data-wow-duration=".9s"
                     data-wow-delay=".3s"
                   >
                     Amplify Your Success, Forloops Unlocks the Power of AI!
                   </h3>
                   <p
-                    class="wow tpfadeUp"
+                    className="wow tpfadeUp"
                     data-wow-duration=".9s"
                     data-wow-delay=".5s"
                   >
@@ -130,32 +130,32 @@ const Home_content = () => {
                   </p>
                 </div>
                 <div
-                  class="tp-hero__button-box wow tpfadeUp"
+                  className="tp-hero__button-box wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".7s"
                 >
-                  <a class="tp-btn-blue-square mb-20 mr-25" href="contact.html">
+                  <a className="tp-btn-blue-square mb-20 mr-25" href="contact.html">
                     <span>Get Started</span>
                   </a>
-                  <a class="tp-btn-pink mb-20" href="about.html">
+                  <a className="tp-btn-pink mb-20" href="about.html">
                     <span>Learn More</span>
                   </a>
                 </div>
               </div>
               <div
-                class="col-xl-6 col-lg-6 wow tpfadeRight"
+                className="col-xl-6 col-lg-6 wow tpfadeRight"
                 data-wow-duration=".9s"
                 data-wow-delay=".9s"
               >
-                <div class="tp-hero__wrapper-3 d-flex justify-content-center justify-content-lg-end">
-                  <div class="tp-hero__thumb-3">
+                <div className="tp-hero__wrapper-3 d-flex justify-content-center justify-content-lg-end">
+                  <div className="tp-hero__thumb-3">
                     <Image
                       src="/img/hero/hero-3.jpg"
                       alt=""
                       width={500}
                       height={500}
                     />
-                    <div class="tp-hero__thumb-shape-1">
+                    <div className="tp-hero__thumb-shape-1">
                       <Image
                         src="/img/hero/hero-shape-3-1.png"
                         width={100}
@@ -163,7 +163,7 @@ const Home_content = () => {
                         alt=""
                       />
                     </div>
-                    <div class="tp-hero__thumb-shape-2">
+                    <div className="tp-hero__thumb-shape-2">
                       <Image
                         src="/img/hero/hero-shape-3-2.png"
                         width={100}
@@ -178,14 +178,14 @@ const Home_content = () => {
           </div>
         </div>
         {/* <!-- tp-service-area-start --> */}
-        <div class="tp-service__area tp-service__space theme-bg-3 pt-120 pb-100">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="tp-service__section-wrapper d-flex justify-content-between">
-                  <div class="tp-service__title-box ml-40">
+        <div className="tp-service__area tp-service__space theme-bg-3 pt-120 pb-100">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="tp-service__section-wrapper d-flex justify-content-between">
+                  <div className="tp-service__title-box ml-40">
                     <h3
-                      class="tp-service__title wow tpfadeUp"
+                      className="tp-service__title wow tpfadeUp"
                       data-wow-duration=".9s"
                       data-wow-delay=".3s"
                     >
@@ -195,14 +195,14 @@ const Home_content = () => {
                 </div>
               </div>
             </div>
-            <div class="tp-service__slider-wrapper">
-              <div class="tp-service__slider-active d-none">
+            <div className="tp-service__slider-wrapper">
+              <div className="tp-service__slider-active d-none">
                 <div
-                  class="tp-service__item wow tpfadeUp"
+                  className="tp-service__item wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".5s"
                 >
-                  <div class="tp-service__icon">
+                  <div className="tp-service__icon">
                     <Image
                       src="/img/service/service-icon-1.png"
                       width={200}
@@ -210,8 +210,8 @@ const Home_content = () => {
                       alt="AI Consulting"
                     />
                   </div>
-                  <div class="tp-service__content">
-                    <h4 class="tp-service__title-sm">AI Consulting</h4>
+                  <div className="tp-service__content">
+                    <h4 className="tp-service__title-sm">AI Consulting</h4>
                     <p>
                       Strategic AI Guidance for Business Advancement. Let&apos;s
                       Unlock Your Potential!
@@ -219,11 +219,11 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="tp-service__item wow tpfadeUp"
+                  className="tp-service__item wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".7s"
                 >
-                  <div class="tp-service__icon">
+                  <div className="tp-service__icon">
                     <Image
                       src="/img/service/service-icon-2.png"
                       width={200}
@@ -231,8 +231,8 @@ const Home_content = () => {
                       alt="Generative AI"
                     />
                   </div>
-                  <div class="tp-service__content">
-                    <h4 class="tp-service__title-sm">Generative AI</h4>
+                  <div className="tp-service__content">
+                    <h4 className="tp-service__title-sm">Generative AI</h4>
                     <p>
                       Inspire Creativity with Generative AI Solutions.
                       Redefining Boundaries with AI-Generated Content!
@@ -240,11 +240,11 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="tp-service__item wow tpfadeUp"
+                  className="tp-service__item wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".9s"
                 >
-                  <div class="tp-service__icon">
+                  <div className="tp-service__icon">
                     <Image
                       src="/img/service/service-icon-3.png"
                       width={200}
@@ -252,8 +252,8 @@ const Home_content = () => {
                       alt="AI Chatbots"
                     />
                   </div>
-                  <div class="tp-service__content">
-                    <h4 class="tp-service__title-sm">AI Chatbots</h4>
+                  <div className="tp-service__content">
+                    <h4 className="tp-service__title-sm">AI Chatbots</h4>
                     <p>
                       Conversational AI for Enhanced Customer Engagement.
                       Powered by integrating ChatGPT or any other LLM, our
@@ -263,11 +263,11 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="tp-service__item wow tpfadeUp"
+                  className="tp-service__item wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay="1s"
                 >
-                  <div class="tp-service__icon">
+                  <div className="tp-service__icon">
                     <Image
                       src="/img/service/service-icon-1.png"
                       width={200}
@@ -275,8 +275,8 @@ const Home_content = () => {
                       alt="Machine Learning Solutions"
                     />
                   </div>
-                  <div class="tp-service__content">
-                    <h4 class="tp-service__title-sm">
+                  <div className="tp-service__content">
+                    <h4 className="tp-service__title-sm">
                       Machine Learning Solutions
                     </h4>
                     <p>
@@ -286,11 +286,11 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="tp-service__item wow tpfadeUp"
+                  className="tp-service__item wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay="1.2s"
                 >
-                  <div class="tp-service__icon">
+                  <div className="tp-service__icon">
                     <Image
                       src="/img/service/service-icon-2.png"
                       width={200}
@@ -298,8 +298,8 @@ const Home_content = () => {
                       alt="Computer Vision & NLP Solutions"
                     />
                   </div>
-                  <div class="tp-service__content">
-                    <h4 class="tp-service__title-sm">
+                  <div className="tp-service__content">
+                    <h4 className="tp-service__title-sm">
                       Computer Vision & NLP Solutions
                     </h4>
                     <p>
@@ -310,11 +310,11 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="tp-service__item wow tpfadeUp"
+                  className="tp-service__item wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay="1.2s"
                 >
-                  <div class="tp-service__icon">
+                  <div className="tp-service__icon">
                     <Image
                       src="/img/service/service-icon-3.png"
                       width={200}
@@ -322,8 +322,8 @@ const Home_content = () => {
                       alt="Business Intelligence Solutions"
                     />
                   </div>
-                  <div class="tp-service__content">
-                    <h4 class="tp-service__title-sm">
+                  <div className="tp-service__content">
+                    <h4 className="tp-service__title-sm">
                       Business Intelligence Solutions
                     </h4>
                     <p>
@@ -334,14 +334,14 @@ const Home_content = () => {
                   </div>
                 </div>
               </div>
-              <div class="row tp-service__slider">
+              <div className="row tp-service__slider">
                 <div
-                  class="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
+                  className="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".5s"
                 >
-                  <div class="m-3 tp-service__item">
-                    <div class="tp-service__icon">
+                  <div className="m-3 tp-service__item">
+                    <div className="tp-service__icon">
                       <Image
                         src="/img/service/service-icon-1.png"
                         width={200}
@@ -349,8 +349,8 @@ const Home_content = () => {
                         alt="AI Consulting"
                       />
                     </div>
-                    <div class="tp-service__content">
-                      <h4 class="tp-service__title-sm">AI Consulting</h4>
+                    <div className="tp-service__content">
+                      <h4 className="tp-service__title-sm">AI Consulting</h4>
                       <p>
                         Strategic AI Guidance for Business Advancement. Let&apos;s
                         Unlock Your Potential!
@@ -359,12 +359,12 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
+                  className="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".7s"
                 >
-                  <div class="m-3 tp-service__item">
-                    <div class="tp-service__icon">
+                  <div className="m-3 tp-service__item">
+                    <div className="tp-service__icon">
                       <Image
                         src="/img/service/service-icon-2.png"
                         width={200}
@@ -372,8 +372,8 @@ const Home_content = () => {
                         alt="Generative AI"
                       />
                     </div>
-                    <div class="tp-service__content">
-                      <h4 class="tp-service__title-sm">Generative AI</h4>
+                    <div className="tp-service__content">
+                      <h4 className="tp-service__title-sm">Generative AI</h4>
                       <p>
                         Inspire Creativity with Generative AI Solutions.
                         Redefining Boundaries with AI-Generated Content!
@@ -382,12 +382,12 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
+                  className="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".9s"
                 >
-                  <div class="m-3 tp-service__item">
-                    <div class="tp-service__icon">
+                  <div className="m-3 tp-service__item">
+                    <div className="tp-service__icon">
                       <Image
                         src="/img/service/service-icon-3.png"
                         width={200}
@@ -395,8 +395,8 @@ const Home_content = () => {
                         alt="AI Chatbots"
                       />
                     </div>
-                    <div class="tp-service__content">
-                      <h4 class="tp-service__title-sm">AI Chatbots</h4>
+                    <div className="tp-service__content">
+                      <h4 className="tp-service__title-sm">AI Chatbots</h4>
                       <p>
                         Conversational AI for Enhanced Customer Engagement.
                         Powered by integrating ChatGPT or any other LLM, our
@@ -407,12 +407,12 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
+                  className="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay="1s"
                 >
-                  <div class="m-3 tp-service__item">
-                    <div class="tp-service__icon">
+                  <div className="m-3 tp-service__item">
+                    <div className="tp-service__icon">
                       <Image
                         src="/img/service/service-icon-1.png"
                         width={200}
@@ -420,8 +420,8 @@ const Home_content = () => {
                         alt=""
                       />
                     </div>
-                    <div class="tp-service__content">
-                      <h4 class="tp-service__title-sm">
+                    <div className="tp-service__content">
+                      <h4 className="tp-service__title-sm">
                         Machine Learning Solutions
                       </h4>
                       <p>
@@ -432,12 +432,12 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
+                  className="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay="1.2s"
                 >
-                  <div class="m-3 tp-service__item">
-                    <div class="tp-service__icon">
+                  <div className="m-3 tp-service__item">
+                    <div className="tp-service__icon">
                       <Image
                         src="/img/service/service-icon-2.png"
                         width={200}
@@ -445,8 +445,8 @@ const Home_content = () => {
                         alt=""
                       />
                     </div>
-                    <div class="tp-service__content">
-                      <h4 class="tp-service__title-sm">
+                    <div className="tp-service__content">
+                      <h4 className="tp-service__title-sm">
                         Computer Vision & NLP Solutions
                       </h4>
                       <p>
@@ -458,12 +458,12 @@ const Home_content = () => {
                   </div>
                 </div>
                 <div
-                  class="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
+                  className="col-12 col-sm-6 col-lg-4 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay="1.2s"
                 >
-                  <div class="m-3 tp-service__item">
-                    <div class="tp-service__icon">
+                  <div className="m-3 tp-service__item">
+                    <div className="tp-service__icon">
                       <Image
                         src="/img/service/service-icon-3.png"
                         width={200}
@@ -471,8 +471,8 @@ const Home_content = () => {
                         alt="Business Intelligence Solutions"
                       />
                     </div>
-                    <div class="tp-service__content">
-                      <h4 class="tp-service__title-sm">
+                    <div className="tp-service__content">
+                      <h4 className="tp-service__title-sm">
                         Business Intelligence Solutions
                       </h4>
                       <p>
@@ -490,8 +490,8 @@ const Home_content = () => {
         {/* <!-- tp-service-area-end --> */}
 
         {/* <!-- tp-about-area-start --> */}
-        <div class="tp-about__area pt-120 pb-120 p-relative">
-          <div class="tp-about__shape-3-1">
+        <div className="tp-about__area pt-120 pb-120 p-relative">
+          <div className="tp-about__shape-3-1">
             <Image
               src="/img/hero/hero-shape-3-5.png"
               width={200}
@@ -499,7 +499,7 @@ const Home_content = () => {
               alt="shape"
             />
           </div>
-          <div class="tp-about__shape-3-2">
+          <div className="tp-about__shape-3-2">
             <Image
               src="/img/hero/hero-shape-3-6.png"
               width={200}
@@ -507,15 +507,15 @@ const Home_content = () => {
               alt="shape"
             />
           </div>
-          <div class="container">
-            <div class="row align-items-center">
+          <div className="container">
+            <div className="row align-items-center">
               <div
-                class="col-lg-4 wow tpfadeLeft"
+                className="col-lg-4 wow tpfadeLeft"
                 data-wow-duration=".9s"
                 data-wow-delay=".5s"
               >
-                <div class="tp-about__thumb-wrapper p-relative">
-                  <div class="tp-about__shape-1">
+                <div className="tp-about__thumb-wrapper p-relative">
+                  <div className="tp-about__shape-1">
                     <Image
                       src="/img/hero/hero-shape-3-1.png"
                       width={100}
@@ -523,7 +523,7 @@ const Home_content = () => {
                       alt="shape"
                     />
                   </div>
-                  <div class="tp-about__shape-2">
+                  <div className="tp-about__shape-2">
                     <Image
                       src="/img/hero/hero-shape-3-2.png"
                       width={100}
@@ -531,7 +531,7 @@ const Home_content = () => {
                       alt="shape"
                     />
                   </div>
-                  <div class="tp-about__thumb">
+                  <div className="tp-about__thumb">
                     <Image
                       src="/img/hero/hero-4.jpg"
                       width={300}
@@ -542,15 +542,15 @@ const Home_content = () => {
                 </div>
               </div>
               <div
-                class="col-lg-8 wow tpfadeRight"
+                className="col-lg-8 wow tpfadeRight"
                 data-wow-duration=".9s"
                 data-wow-delay=".7s"
               >
-                <div class="tp-about__section-box">
-                  <h3 class="tp-section-title-md pb-30">
+                <div className="tp-about__section-box">
+                  <h3 className="tp-section-title-md pb-30">
                     Fuel your business&apos;s success with Forloops
                   </h3>
-                  <div class="tp-about__text">
+                  <div className="tp-about__text">
                     <p>
                       Forloops, a proud member of the AWS Partner Network,
                       serving as your dedicated AI partner. Our tailored AI,
@@ -580,7 +580,7 @@ const Home_content = () => {
                       competitive edge.
                     </p>
                   </div>
-                  <a class="tp-btn-blue-square" href="contact.html">
+                  <a className="tp-btn-blue-square" href="contact.html">
                     <span>Get Started</span>
                   </a>
                 </div>

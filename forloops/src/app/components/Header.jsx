@@ -9,11 +9,11 @@ const Header = () => {
   return (
     <header>
       {/* <!-- tp-header-area-start --> */}
-      <div class="tp-header__top-area theme-bg tp-header__space-3 d-none d-sm-block">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-xxl-8 col-xl-8 col-lg-6 col-md-6 col-6">
-              <div class="tp-header__top-left">
+      <div className="tp-header__top-area theme-bg tp-header__space-3 d-none d-sm-block">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-xxl-8 col-xl-8 col-lg-6 col-md-6 col-6">
+              <div className="tp-header__top-left">
                 <a href="tel:+923218414635">
                   <svg
                     width="14"
@@ -34,10 +34,10 @@ const Header = () => {
                     <circle cx="2" cy="12" r="2" fill="#3EB7FD" />
                   </svg>
                   <span>
-                    Help Desk : <b class="frist-child">+92-321-8414635</b>
+                    Help Desk : <b className="frist-child">+92-321-8414635</b>
                   </span>
                 </a>
-                <a class="last-child" href="#">
+                <a className="last-child" href="#">
                   <svg
                     width="16"
                     height="15"
@@ -57,10 +57,10 @@ const Header = () => {
                 </a>
               </div>
             </div>
-            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-6">
-              <div class="tp-header__top-right text-end">
+            <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-6">
+              <div className="tp-header__top-right text-end">
                 <a href="https://www.linkedin.com/company/98603088/">
-                  <i class="fab fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </div>
             </div>
@@ -69,13 +69,13 @@ const Header = () => {
       </div>
       <div
         id="header-sticky"
-        class="tp-header__area tp-header__space-3 tp-header__bottom tp-header__menu-space p-relative"
+        className="tp-header__area tp-header__space-3 tp-header__bottom tp-header__menu-space p-relative"
       >
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col-xl-2 col-lg-2 col-md-6 col-7">
-              <div class="tp-header__logo">
-                <a href="index.html">
+        <div className="container-fluid">
+          <div className="row align-items-center">
+            <div className="col-xl-2 col-lg-2 col-md-6 col-7">
+              <div className="tp-header__logo">
+                <a href="/">
                   <Image
                     src="/logo-black.png"
                     alt="forloops logo"
@@ -85,8 +85,8 @@ const Header = () => {
                 </a>
               </div>
             </div>
-            <div class="col-xl-7 col-lg-7 d-none d-lg-block z-index-5">
-              <div class="tp-header__main-menu tp-header__black-menu tp-header__menu-3">
+            <div className="col-xl-7 col-lg-7 d-none d-lg-block z-index-5">
+              <div className="tp-header__main-menu tp-header__black-menu tp-header__menu-3">
                 <nav id="mobile-menu">
                   <ul>
                     <li>
@@ -96,31 +96,31 @@ const Header = () => {
                       <a href="/about">About</a>
                     </li>
                     <li>
-                      <a href="blog.html">Blog</a>
+                      <a href="/blog">Blog</a>
                     </li>
                     <li>
-                      <a href="faq.html">Faq</a>
+                      <a href="/faq/">Faq</a>
                     </li>
                     <li>
-                      <a href="contact.html">Contact</a>
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </nav>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-5">
-              <div class="tp-header__right-two d-flex align-items-center justify-content-end">
+            <div className="col-xl-3 col-lg-3 col-md-6 col-5">
+              <div className="tp-header__right-two d-flex align-items-center justify-content-end">
                 <a
-                  class="tp-btn-blue-square d-none d-md-block"
+                  className="tp-btn-blue-square d-none d-md-block"
                   href="contact.html"
                 >
                   <span>Get Started</span>
                 </a>
                 <a
-                  class="tp-header__bars tp-menu-bar d-lg-none"
+                  className="tp-header__bars tp-menu-bar d-lg-none"
                   href="javascript:void(0)"
                 >
-                  <i class="far fa-bars"></i>
+                  <i className="far fa-bars"></i>
                 </a>
               </div>
             </div>

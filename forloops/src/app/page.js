@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* <!-- preloader --> */}
       {/* <div id="preloader">
-        <div class="preloader">
+        <div className="preloader">
           <span></span>
           <span></span>
         </div>
@@ -17,15 +17,14 @@ export default function Home() {
       {/* <!-- preloader end  --> */}
 
       {/* <!-- back-to-top-start  --> */}
-      <button class="scroll-top scroll-to-target" data-target="html">
-        <i class="far fa-angle-double-up"></i>
+      <button className="scroll-top scroll-to-target" data-target="html">
+        <i className="far fa-angle-double-up"></i>
       </button>
       {/* <!-- back-to-top-end  --> */}
 
-      <Header />
       <Home_content />
       <Blog />
-      <Footer />
+     
     </>
   );
 }

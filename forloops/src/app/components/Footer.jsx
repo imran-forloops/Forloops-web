@@ -5,18 +5,18 @@ const Footer = () => {
   return (
     <footer>
       {/* <!-- tp-footer-area-start --> */}
-      <div class="tp-footer__area theme-bg pb-50">
+      <div className="tp-footer__area theme-bg pb-50">
         <div
-          class="tp-footer-bottom__area wow tpfadeUp"
+          className="tp-footer-bottom__area wow tpfadeUp"
           data-wow-duration=".9s"
           data-wow-delay=".9s"
         >
-          <div class="container">
-            <div class="tp-footer-bottom__border-top pt-40">
-              <div class="row align-items-center">
-                <div class="col-xl-2 col-lg-2 col-md-6 col-12 order-2 order-lg-1 text-center text-md-start">
-                  <div class="tp-footer-bottom__logo">
-                    <a href="index.html">
+          <div className="container">
+            <div className="tp-footer-bottom__border-top pt-40">
+              <div className="row align-items-center">
+                <div className="col-xl-2 col-lg-2 col-md-6 col-12 order-2 order-lg-1 text-center text-md-start">
+                  <div className="tp-footer-bottom__logo">
+                    <a href="/">
                       <Image
                         src="/img/logo/logo-white.png"
                         width={100}
@@ -26,33 +26,33 @@ const Footer = () => {
                     </a>
                   </div>
                 </div>
-                <div class="col-xl-7 col-lg-7 col-md-12 col-12 order-1 order-lg-2 d-block">
-                  <div class="tp-footer-bottom__menu">
+                <div className="col-xl-7 col-lg-7 col-md-12 col-12 order-1 order-lg-2 d-block">
+                  <div className="tp-footer-bottom__menu">
                     <ul>
                       <li>
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
-                        <a href="about.html">About</a>
+                        <a href="/about">About</a>
                       </li>
                       <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="/blog">Blog</a>
                       </li>
                       <li>
-                        <a href="faq.html">Faq</a>
+                        <a href="/faq">Faq</a>
                       </li>
                       <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="/contact">Contact</a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-12 order-2 order-lg-3 text-center text-md-end">
-                  <div class="tp-footer-bottom__social">
+                <div className="col-xl-3 col-lg-3 col-md-6 col-12 order-2 order-lg-3 text-center text-md-end">
+                  <div className="tp-footer-bottom__social">
                     <ul>
                       <li>
                         <a href="https://www.linkedin.com/company/98603088/">
-                          <i class="fab fa-linkedin-in"></i>
+                          <i className="fab fa-linkedin-in"></i>
                         </a>
                       </li>
                     </ul>

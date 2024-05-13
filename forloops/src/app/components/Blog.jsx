@@ -7,30 +7,30 @@ const Blog = () => {
   return (
     <>
       {/* <!-- tp-blog-area-start --> */}
-      <div class="tp-blog__area grey-bg pt-120 pb-120">
-        <div class="container">
-          <div class="row">
+      <div className="tp-blog__area grey-bg pt-120 pb-120">
+        <div className="container">
+          <div className="row">
             <div
-              class="col-12 wow tpfadeUp"
+              className="col-12 wow tpfadeUp"
               data-wow-duration=".9s"
               data-wow-delay=".3s"
             >
-              <div class="tp-blog__section-box d-flex justify-content-between align-items-center">
-                <h3 class="tp-section-title-md">Read our recent blog</h3>
-                <a class="tp-btn-blue-square" href="blog.html">
+              <div className="tp-blog__section-box d-flex justify-content-between align-items-center">
+                <h3 className="tp-section-title-md">Read our recent blog</h3>
+                <a className="tp-btn-blue-square" href="blog.html">
                   <span>See all Blog</span>
                 </a>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div className="row">
             <div
-              class="col-xl-6 col-lg-6 mb-30 wow tpfadeLeft"
+              className="col-xl-6 col-lg-6 mb-30 wow tpfadeLeft"
               data-wow-duration=".9s"
               data-wow-delay=".5s"
             >
-              <div class="tp-blog__item">
-                <div class="tp-blog__thumb fix">
+              <div className="tp-blog__item">
+                <div className="tp-blog__thumb fix">
                   <a href="blog-details.html">
                     <Image
                       src="/img/blog/article-1.jpg"
@@ -40,12 +40,12 @@ const Blog = () => {
                     />
                   </a>
                 </div>
-                <div class="tp-blog__content-wrapper">
-                  <div class="tp-blog__tag">
+                <div className="tp-blog__content-wrapper">
+                  <div className="tp-blog__tag">
                     <span>Article</span>
                   </div>
-                  <div class="tp-blog__content">
-                    <h3 class="tp-blog__title">
+                  <div className="tp-blog__content">
+                    <h3 className="tp-blog__title">
                       <a href="blog-details.html">
                         The Magical World of Generative AI in Customer Support
                       </a>
@@ -60,12 +60,12 @@ const Blog = () => {
               </div>
             </div>
             <div
-              class="col-xl-6 col-lg-6 mb-30 wow tpfadeRight d-none"
+              className="col-xl-6 col-lg-6 mb-30 wow tpfadeRight d-none"
               data-wow-duration=".9s"
               data-wow-delay=".7s"
             >
-              <div class="tp-blog__item">
-                <div class="tp-blog__thumb fix">
+              <div className="tp-blog__item">
+                <div className="tp-blog__thumb fix">
                   <a href="blog-details.html">
                     <Image
                       src="/img/blog/blog-2.jpg"
@@ -75,12 +75,12 @@ const Blog = () => {
                     />
                   </a>
                 </div>
-                <div class="tp-blog__content-wrapper">
-                  <div class="tp-blog__tag">
+                <div className="tp-blog__content-wrapper">
+                  <div className="tp-blog__tag">
                     <span>Design</span>
                   </div>
-                  <div class="tp-blog__content">
-                    <h3 class="tp-blog__title">
+                  <div className="tp-blog__content">
+                    <h3 className="tp-blog__title">
                       <a href="blog-details.html">
                         Is your company facing a social media crisis?
                       </a>
