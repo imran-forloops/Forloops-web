@@ -1,11 +1,16 @@
+"use client";
+
 import "bootstrap/dist/css/bootstrap.min.css";
-import Image from "next/image";
-// import "../assets/css/style.css";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-regular-svg-icons";
+import Image from "next/image";
+
 const Header = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const handleMenuClick = (event) => {
+    event.preventDefault();
+    setIsSidebarOpen(!isSidebarOpen);
+  };
   return (
     <header>
       {/* <!-- tp-header-area-start --> */}
@@ -77,7 +82,7 @@ const Header = () => {
               <div className="tp-header__logo">
                 <a href="/">
                   <Image
-                    src="/logo-black.png"
+                    src="/img/logo/logo-black.png"
                     alt="forloops logo"
                     width={200}
                     height={50}
@@ -87,22 +92,25 @@ const Header = () => {
             </div>
             <div className="col-xl-7 col-lg-7 d-none d-lg-block z-index-5">
               <div className="tp-header__main-menu tp-header__black-menu tp-header__menu-3">
-                <nav id="mobile-menu">
+                <nav
+                  id="sidenav-1"
+                  className={`sidenav ${isSidebarOpen ? "sidenav-open" : ""}`}
+                >
                   <ul>
                     <li>
-                      <Link href="index.html">Home</Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
-                      <a href="/about">About</a>
+                      <Link href="/about">About</Link>
                     </li>
                     <li>
-                      <a href="/blog">Blog</a>
+                      <Link href="/blog">Blog</Link>
                     </li>
                     <li>
-                      <a href="/faq/">Faq</a>
+                      <Link href="/faq/">Faq</Link>
                     </li>
                     <li>
-                      <a href="/contact">Contact</a>
+                      <Link href="/contact">Contact</Link>
                     </li>
                   </ul>
                 </nav>
@@ -112,15 +120,16 @@ const Header = () => {
               <div className="tp-header__right-two d-flex align-items-center justify-content-end">
                 <a
                   className="tp-btn-blue-square d-none d-md-block"
-                  href="contact.html"
+                  href="/contact"
                 >
                   <span>Get Started</span>
                 </a>
                 <a
                   className="tp-header__bars tp-menu-bar d-lg-none"
-                  href="javascript:void(0)"
+                  href="#"
+                  onClick={handleMenuClick}
                 >
-                  <i className="far fa-bars"></i>
+                  <i className="fa-solid fa-bars"></i>
                 </a>
               </div>
             </div>

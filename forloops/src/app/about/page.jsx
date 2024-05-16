@@ -1,19 +1,20 @@
 import Image from "next/image";
 import React from "react";
-import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import "../../../public/scss/components/_breadcrumb.scss";
 
 const page = () => {
   return (
     <main>
-      
       {/* <!-- breadcrumb area start --> */}
       <div
-        className="breadcrumb__area breadcrumb-height p-relative grey-bg"
+        className="breadcrumb__area breadcrumb-height p-relative nextimg grey-bg"
         data-background="/img/breadcrumb/breadcrumb.jpg"
       >
         <div className="breadcrumb__scroll-bottom smooth">
           <a href="#tp-service__area">
-            <i className="far fa-arrow-down"></i>
+            <i className="fa-solid fa-arrow-down"></i>
           </a>
         </div>
         <div className="container">
@@ -26,7 +27,8 @@ const page = () => {
                     <a href="#">Home</a>
                   </span>
                   <span className="dvdr">
-                    <i className="fa fa-angle-right"></i>
+                    <FontAwesomeIcon icon={faAngleRight} />
+                   
                   </span>
                   <span>About us</span>
                 </div>
@@ -421,33 +423,33 @@ const page = () => {
       {/* <!-- tp-service-area-end --> */}
 
       {/* <!-- tp-faq-area-start --> */}
-      <div class="tp-faq__area pt-120 pb-110">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
+      <div className="tp-faq__area pt-120 pb-110">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
               <div
-                class="tp-service__section-wrapper service-inner d-flex justify-content-between wow tpfadeUp"
+                className="tp-service__section-wrapper service-inner d-flex justify-content-between wow tpfadeUp"
                 data-wow-duration=".9s"
                 data-wow-delay=".5s"
               >
-                <div class="tp-service__title-box ml-40">
-                  <h3 class="tp-service__title">FAQ</h3>
+                <div className="tp-service__title-box ml-40">
+                  <h3 className="tp-service__title">FAQ</h3>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div className="row">
             <div
-              class="col-xl-7 col-lg-6 wow tpfadeLeft"
+              className="col-xl-7 col-lg-6 wow tpfadeLeft"
               data-wow-duration=".9s"
               data-wow-delay=".7s"
             >
-              <div class="tp-custom-accordio-3">
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-items">
-                    <h2 class="accordion-header" id="headingOne">
+              <div className="tp-custom-accordio-3">
+                <div className="accordion" id="accordionExample">
+                  <div className="accordion-items">
+                    <h2 className="accordion-header" id="headingOne">
                       <button
-                        class="accordion-buttons collapsed"
+                        className="accordion-buttons collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseOne"
@@ -459,11 +461,11 @@ const page = () => {
                     </h2>
                     <div
                       id="collapseOne"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingOne"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         Forloops specializes in AI consulting, custom AI and
                         Machine Learning solutions, Generative AI, AI Chatbots,
                         Natural Language Processing (NLP) solutions, and
@@ -473,10 +475,10 @@ const page = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-items">
-                    <h2 class="accordion-header" id="headingTwo">
+                  <div className="accordion-items">
+                    <h2 className="accordion-header" id="headingTwo">
                       <button
-                        class="accordion-buttons collapsed"
+                        className="accordion-buttons collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo"
@@ -488,11 +490,11 @@ const page = () => {
                     </h2>
                     <div
                       id="collapseTwo"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingTwo"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         AI offers a multitude of benefits, including enhanced
                         decision-making, process automation, personalized
                         customer experiences, and improved efficiency. By
@@ -502,10 +504,10 @@ const page = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-items">
-                    <h2 class="accordion-header" id="headingThree">
+                  <div className="accordion-items">
+                    <h2 className="accordion-header" id="headingThree">
                       <button
-                        class="accordion-buttons collapsed"
+                        className="accordion-buttons collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseThree"
@@ -517,11 +519,11 @@ const page = () => {
                     </h2>
                     <div
                       id="collapseThree"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingThree"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         At Forloops, data security is a top priority. We
                         implement robust security measures and adhere to
                         industry best practices to safeguard your data. Our team
@@ -531,10 +533,10 @@ const page = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-items">
-                    <h2 class="accordion-header" id="headingfour">
+                  <div className="accordion-items">
+                    <h2 className="accordion-header" id="headingfour">
                       <button
-                        class="accordion-buttons collapsed"
+                        className="accordion-buttons collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapsefour"
@@ -547,11 +549,11 @@ const page = () => {
                     </h2>
                     <div
                       id="collapsefour"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingfour"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         Absolutely! We understand that each business is unique,
                         and our team of experts excels in tailoring AI solutions
                         to meet your specific requirements. Whether you need a
@@ -560,10 +562,10 @@ const page = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-items">
-                    <h2 class="accordion-header" id="headingfive">
+                  <div className="accordion-items">
+                    <h2 className="accordion-header" id="headingfive">
                       <button
-                        class="accordion-buttons collapsed"
+                        className="accordion-buttons collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapsefive"
@@ -576,11 +578,11 @@ const page = () => {
                     </h2>
                     <div
                       id="collapsefive"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingfive"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         Forloops stands out due to our team&apos;s deep
                         expertise and experience in the AI domain. With Dr.
                         Basit Riaz Sheikh, a certified AI expert, leading the
@@ -590,10 +592,10 @@ const page = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-items">
-                    <h2 class="accordion-header" id="headingsix">
+                  <div className="accordion-items">
+                    <h2 className="accordion-header" id="headingsix">
                       <button
-                        class="accordion-buttons collapsed"
+                        className="accordion-buttons collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapsesix"
@@ -605,11 +607,11 @@ const page = () => {
                     </h2>
                     <div
                       id="collapsesix"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingsix"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         Getting started with Forloops is simple. Reach out to us
                         through our website or contact information, and our team
                         will be in touch to understand your business needs and
@@ -623,12 +625,12 @@ const page = () => {
               </div>
             </div>
             <div
-              class="col-xl-5 col-lg-6 wow tpfadeUp"
+              className="col-xl-5 col-lg-6 wow tpfadeUp"
               data-wow-duration=".9s"
               data-wow-delay=".9s"
             >
-              <div class="tp-faq__right-side text-center">
-                <div class="tp-faq__icon">
+              <div className="tp-faq__right-side text-center">
+                <div className="tp-faq__icon">
                   <a href="#">
                     <svg
                       width="30"
@@ -644,8 +646,8 @@ const page = () => {
                     </svg>
                   </a>
                 </div>
-                <div class="tp-faq__content">
-                  <h4 class="tp-faq__faq-sm-title">
+                <div className="tp-faq__content">
+                  <h4 className="tp-faq__faq-sm-title">
                     Do you have more questions?
                   </h4>
                   <p>
@@ -660,8 +662,6 @@ const page = () => {
         </div>
       </div>
       {/* <!-- tp-faq-area-end --> */}
-
-      
     </main>
   );
 };

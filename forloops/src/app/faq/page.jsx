@@ -1,30 +1,38 @@
 import Image from "next/image";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const page = () => {
   return (
     <main>
       {/* <!-- breadcrumb area start --> */}
       <div
-        class="breadcrumb__area breadcrumb-height p-relative grey-bg"
-        data-background="/img/breadcrumb/breadcrumb.jpg"
+        className="breadcrumbarea breadcrumb-height p-relative grey-bg"
+        style={{
+          backgroundImage: `url('/img/breadcrumb/breadcrumb.jpg')`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        <div class="breadcrumb__scroll-bottom smooth">
+        <div className="breadcrumb__scroll-bottom smooth">
           <a href="#faq">
-            <i class="far fa-arrow-down"></i>
+            {" "}
+            <i className="fa-solid fa-arrow-down"></i>
           </a>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-xxl-12">
-              <div class="breadcrumb__content text-center">
-                <h3 class="breadcrumb__title">Ask Question</h3>
-                <div class="breadcrumb__list">
+        <div className="container">
+          <div className="row">
+            <div className="col-xxl-12">
+              <div className="breadcrumb__content text-center">
+                <h3 className="breadcrumb__title">Ask Question</h3>
+                <div className="breadcrumb__list">
                   <span>
                     <a href="index.html">Home</a>
                   </span>
-                  <span class="dvdr">
-                    <i class="fa fa-angle-right"></i>
+                  <span className="dvdr">
+                    <FontAwesomeIcon icon={faAngleRight} />
                   </span>
                   <span>Faq</span>
                 </div>
@@ -36,32 +44,32 @@ const page = () => {
       {/* <!-- breadcrumb area end --> */}
 
       {/* <!-- tp-support-area-start --> */}
-      <div class="tp-support__area tp-support__bg-2 pt-120 pb-120 p-relative">
-        <div class="tp-support__bg tp-support__bg-2">
+      <div className="tp-support__area tp-support__bg-2 pt-120 pb-120 p-relative">
+        <div className="tp-support__bg tp-support__bg-2">
           <Image
             src="/img/faq/faq-bg-shape-2.png"
             width={800}
-            height={730}
+            height={700}
             alt="faq-bg-shape-2.png"
           />
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="tp-support__title-box text-center mb-70">
-                <h3 class="tp-section-title">Need A Support? 🎧</h3>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="tp-support__title-box text-center mb-70">
+                <h3 className="tp-section-title">Need A Support? 🎧</h3>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="tp-support__faq">
-                <div class="tp-custom-accordio-2">
-                  <div class="accordion" id="accordionExample-2">
-                    <div id="faq" class="accordion-items border-show">
-                      <h2 class="accordion-header" id="heading-1">
+          <div className="row">
+            <div className="col-12">
+              <div className="tp-support__faq">
+                <div className="tp-custom-accordio-2">
+                  <div className="accordion" id="accordionExample-2">
+                    <div id="faq" className="accordion-items border-show">
+                      <h2 className="accordion-header" id="heading-1">
                         <button
-                          class="accordion-buttons "
+                          className="accordion-buttons "
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapse-1"
@@ -73,11 +81,11 @@ const page = () => {
                       </h2>
                       <div
                         id="collapse-1"
-                        class="accordion-collapse collapse show"
+                        className="accordion-collapse collapse show"
                         aria-labelledby="heading-1"
                         data-bs-parent="#accordionExample-2"
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           Forloops specializes in AI consulting, custom AI and
                           Machine Learning solutions, Generative AI, AI
                           Chatbots, Natural Language Processing (NLP) solutions,
@@ -87,10 +95,10 @@ const page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-items border-show">
-                      <h2 class="accordion-header" id="heading-2">
+                    <div className="accordion-items border-show">
+                      <h2 className="accordion-header" id="heading-2">
                         <button
-                          class="accordion-buttons collapsed  "
+                          className="accordion-buttons collapsed  "
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapse-2"
@@ -102,11 +110,11 @@ const page = () => {
                       </h2>
                       <div
                         id="collapse-2"
-                        class="accordion-collapse collapse"
+                        className="accordion-collapse collapse"
                         aria-labelledby="heading-2"
                         data-bs-parent="#accordionExample-2"
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           AI offers a multitude of benefits, including enhanced
                           decision-making, process automation, personalized
                           customer experiences, and improved efficiency. By
@@ -116,10 +124,10 @@ const page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-items border-show">
-                      <h2 class="accordion-header" id="heading-3">
+                    <div className="accordion-items border-show">
+                      <h2 className="accordion-header" id="heading-3">
                         <button
-                          class="accordion-buttons collapsed"
+                          className="accordion-buttons collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapse-3"
@@ -131,11 +139,11 @@ const page = () => {
                       </h2>
                       <div
                         id="collapse-3"
-                        class="accordion-collapse collapse "
+                        className="accordion-collapse collapse "
                         aria-labelledby="heading-3"
                         data-bs-parent="#accordionExample-2"
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           At Forloops, data security is a top priority. We
                           implement robust security measures and adhere to
                           industry best practices to safeguard your data. Our
@@ -145,10 +153,10 @@ const page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-items border-show">
-                      <h2 class="accordion-header" id="heading-4">
+                    <div className="accordion-items border-show">
+                      <h2 className="accordion-header" id="heading-4">
                         <button
-                          class="accordion-buttons collapsed"
+                          className="accordion-buttons collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapse-4"
@@ -161,11 +169,11 @@ const page = () => {
                       </h2>
                       <div
                         id="collapse-4"
-                        class="accordion-collapse collapse "
+                        className="accordion-collapse collapse "
                         aria-labelledby="heading-4"
                         data-bs-parent="#accordionExample-2"
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           Absolutely! We understand that each business is
                           unique, and our team of experts excels in tailoring AI
                           solutions to meet your specific requirements. Whether
@@ -175,10 +183,10 @@ const page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-items border-show">
-                      <h2 class="accordion-header" id="heading-5">
+                    <div className="accordion-items border-show">
+                      <h2 className="accordion-header" id="heading-5">
                         <button
-                          class="accordion-buttons collapsed"
+                          className="accordion-buttons collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapse-5"
@@ -191,11 +199,11 @@ const page = () => {
                       </h2>
                       <div
                         id="collapse-5"
-                        class="accordion-collapse collapse "
+                        className="accordion-collapse collapse "
                         aria-labelledby="heading-5"
                         data-bs-parent="#accordionExample-2"
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           Forloops stands out due to our team&apos;s deep
                           expertise and experience in the AI domain. With Dr.
                           Basit Riaz Sheikh, a certified AI expert, leading the
@@ -206,10 +214,10 @@ const page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-items border-show">
-                      <h2 class="accordion-header" id="heading-6">
+                    <div className="accordion-items border-show">
+                      <h2 className="accordion-header" id="heading-6">
                         <button
-                          class="accordion-buttons collapsed"
+                          className="accordion-buttons collapsed"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapse-6"
@@ -222,11 +230,11 @@ const page = () => {
                       </h2>
                       <div
                         id="collapse-6"
-                        class="accordion-collapse collapse "
+                        className="accordion-collapse collapse "
                         aria-labelledby="heading-6"
                         data-bs-parent="#accordionExample-2"
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           Getting started with Forloops is simple. Reach out to
                           us through our website or contact information, and our
                           team will be in touch to understand your business

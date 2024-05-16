@@ -36,6 +36,7 @@ const Blog = () => {
                       src="/img/blog/article-1.jpg"
                       width={200}
                       height={200}
+                      className="nextimg"
                       alt="article"
                     />
                   </a>
@@ -52,8 +53,9 @@ const Blog = () => {
                     </h3>
                     <p>
                       Generative AI, the advanced technology powering ChatGPT,
-                      Google &apos; s Bard, DALL-E, MidJourney, and an ever-growing
-                      list of AI-powered tools, has taken the world by storm...
+                      Google &apos; s Bard, DALL-E, MidJourney, and an
+                      ever-growing list of AI-powered tools, has taken the world
+                      by storm...
                     </p>
                   </div>
                 </div>

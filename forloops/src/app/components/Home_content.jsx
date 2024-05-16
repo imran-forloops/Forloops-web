@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 const Home_content = () => {
+  console.log(typeof jQuery);
   return (
     <>
       <div className="tp-offcanvas-area">
@@ -23,12 +26,33 @@ const Home_content = () => {
           </div>
           <div className="tpoffcanvas__text">
             <p>Amplify Your Success, Forloops Unlocks the Power of AI!</p>
+
             <p>
               Transforming businesses through custom AI, Generative AI, and
               Machine-learning solutions for growth and efficiency.
             </p>
           </div>
-          <div className="mobile-menu"></div>
+          <div className="mobile-menu mean-container mean-bar ">
+            <nav className="mean-nav">
+              <ul>
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                <li>
+                  <Link href="/about">About</Link>
+                </li>
+                <li>
+                  <Link href="/blog">Blog</Link>
+                </li>
+                <li>
+                  <Link href="/faq/">Faq</Link>
+                </li>
+                <li>
+                  <Link href="/contact">Contact</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div className="tpoffcanvas__info">
             <h3 className="offcanva-title">Get In Touch</h3>
             <div className="tp-info-wrapper mb-20 d-flex align-items-center">
@@ -93,7 +117,8 @@ const Home_content = () => {
             <Image
               src="/img/hero/hero-shape-3-3.png"
               width={200}
-              height={1000}
+              height={2000}
+              className="nextimg"
               alt="shape"
             />
           </div>
@@ -106,6 +131,7 @@ const Home_content = () => {
               src="/img/hero/hero-shape-3-4.png"
               height={1000}
               width={200}
+              className="nextimg"
               alt="shape"
             />
           </div>
@@ -134,7 +160,10 @@ const Home_content = () => {
                   data-wow-duration=".9s"
                   data-wow-delay=".7s"
                 >
-                  <a className="tp-btn-blue-square mb-20 mr-25" href="contact.html">
+                  <a
+                    className="tp-btn-blue-square mb-20 mr-25"
+                    href="contact.html"
+                  >
                     <span>Get Started</span>
                   </a>
                   <a className="tp-btn-pink mb-20" href="about.html">
@@ -151,16 +180,18 @@ const Home_content = () => {
                   <div className="tp-hero__thumb-3">
                     <Image
                       src="/img/hero/hero-3.jpg"
-                      alt=""
+                      alt="ero-3.jpg"
                       width={500}
                       height={500}
+                      className="nextimg"
                     />
                     <div className="tp-hero__thumb-shape-1">
                       <Image
                         src="/img/hero/hero-shape-3-1.png"
                         width={100}
                         height={100}
-                        alt=""
+                        className="nextimg"
+                        alt="ape-3-1.png"
                       />
                     </div>
                     <div className="tp-hero__thumb-shape-2">
@@ -168,7 +199,8 @@ const Home_content = () => {
                         src="/img/hero/hero-shape-3-2.png"
                         width={100}
                         height={100}
-                        alt=""
+                        className="nextimg"
+                        alt="shape-3-2.pn"
                       />
                     </div>
                   </div>
@@ -352,8 +384,8 @@ const Home_content = () => {
                     <div className="tp-service__content">
                       <h4 className="tp-service__title-sm">AI Consulting</h4>
                       <p>
-                        Strategic AI Guidance for Business Advancement. Let&apos;s
-                        Unlock Your Potential!
+                        Strategic AI Guidance for Business Advancement.
+                        Let&apos;s Unlock Your Potential!
                       </p>
                     </div>
                   </div>
@@ -536,6 +568,7 @@ const Home_content = () => {
                       src="/img/hero/hero-4.jpg"
                       width={300}
                       height={300}
+                      className="nextimg"
                       alt="shape"
                     />
                   </div>
