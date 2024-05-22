@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -17,10 +18,10 @@ const page = () => {
         }}
       >
         <div className="breadcrumb__scroll-bottom smooth">
-          <a href="#faq">
+          <Link href="#faq">
             {" "}
             <i className="fa-solid fa-arrow-down"></i>
-          </a>
+          </Link>
         </div>
         <div className="container">
           <div className="row">
@@ -29,7 +30,7 @@ const page = () => {
                 <h3 className="breadcrumb__title">Ask Question</h3>
                 <div className="breadcrumb__list">
                   <span>
-                    <a href="index.html">Home</a>
+                    <Link href="/">Home</Link>
                   </span>
                   <span className="dvdr">
                     <FontAwesomeIcon icon={faAngleRight} />

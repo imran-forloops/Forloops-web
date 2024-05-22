@@ -45,7 +45,10 @@ const blog_details = () => {
         <div className="container">
           <div className="row">
             <div className="col-xxl-8 col-xl-8 col-lg-8 col-12">
-              <div id="Blog-Details" className="postbox__wrapper postbox__p-right">
+              <div
+                id="Blog-Details"
+                className="postbox__wrapper postbox__p-right"
+              >
                 <article className="postbox__item format-image transition-3">
                   <div className="postbox__content">
                     <p>
@@ -59,9 +62,10 @@ const blog_details = () => {
                     </p>
                     <div className="postbox__meta">
                       <span>
-                        <i className="fal fa-user-circle"></i>Dr Basit Riaz Sheikh
+                        <i className="fal fa-user-circle"></i>Dr Basit Riaz
+                        Sheikh
                       </span>
-                      <time datetime="2023-07-22">
+                      <time dateTime="2023-07-22">
                         <i className="fal fa-clock"></i> Jul 20, 2023
                       </time>
                     </div>

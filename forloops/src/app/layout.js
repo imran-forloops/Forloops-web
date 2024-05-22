@@ -34,7 +34,11 @@ import "@fortawesome/fontawesome-free/css/fontawesome.css";
 import "@fortawesome/fontawesome-free/css/regular.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Preloader from "./components/Preloader";
-
+import { ApolloWrapper } from "./ApolloProvider";
+// const client = new ApolloClient({
+//   uri: "https://iabout.me/wp64/graphql",
+//   cache: new InMemoryCache(),
+// });
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Amplify Your Success, Forloops Unlocks the Power of AI!",
@@ -84,18 +88,18 @@ export default function RootLayout({ children }) {
           <meta property="og:image:height" content="512" />
           <meta property="og:image:type" content="image/jpeg" />
         </Head>
-        <body  className={inter.className}>
+        <body className={inter.className} suppressHydrationWarning={true}>
+          {/* <ApolloProvider client={client}> */}
           {/* <!-- back-to-top-start  --> */}
           <button className="scroll-top scroll-to-target" data-target="html">
             <i className="fa fa-angle-double-up"></i>
           </button>
-
           <Preloader />
           {/* <!-- preloader end  --> */}
           <Header />
-
-          {children}
+          <ApolloWrapper>{children}</ApolloWrapper>
           <Footer />
+          {/* </ApolloProvider> */}
           <Script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             strategy="beforeInteractive"

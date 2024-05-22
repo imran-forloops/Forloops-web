@@ -19,7 +19,7 @@ const Header = () => {
           <div className="row align-items-center">
             <div className="col-xxl-8 col-xl-8 col-lg-6 col-md-6 col-6">
               <div className="tp-header__top-left">
-                <a href="tel:+923218414635">
+                <Link href="tel:+923218414635">
                   <svg
                     width="14"
                     height="19"
@@ -41,8 +41,8 @@ const Header = () => {
                   <span>
                     Help Desk : <b className="frist-child">+92-321-8414635</b>
                   </span>
-                </a>
-                <a className="last-child" href="#">
+                </Link>
+                <Link className="last-child" href="#">
                   <svg
                     width="16"
                     height="15"
@@ -59,14 +59,14 @@ const Header = () => {
                     <b>Now Hiring: </b>Are you a driven and motivated AI/ML
                     Engineer or Full Stack Engineer?
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-6">
               <div className="tp-header__top-right text-end">
-                <a href="https://www.linkedin.com/company/98603088/">
+                <Link href="https://www.linkedin.com/company/98603088/">
                   <i className="fab fa-linkedin"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -80,14 +80,14 @@ const Header = () => {
           <div className="row align-items-center">
             <div className="col-xl-2 col-lg-2 col-md-6 col-7">
               <div className="tp-header__logo">
-                <a href="/">
+                <Link href="/">
                   <Image
                     src="/img/logo/logo-black.png"
                     alt="forloops logo"
                     width={200}
                     height={50}
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-xl-7 col-lg-7 d-none d-lg-block z-index-5">
@@ -118,19 +118,19 @@ const Header = () => {
             </div>
             <div className="col-xl-3 col-lg-3 col-md-6 col-5">
               <div className="tp-header__right-two d-flex align-items-center justify-content-end">
-                <a
+                <Link
                   className="tp-btn-blue-square d-none d-md-block"
                   href="/contact"
                 >
                   <span>Get Started</span>
-                </a>
-                <a
+                </Link>
+                <Link
                   className="tp-header__bars tp-menu-bar d-lg-none"
                   href="#"
                   onClick={handleMenuClick}
                 >
                   <i className="fa-solid fa-bars"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

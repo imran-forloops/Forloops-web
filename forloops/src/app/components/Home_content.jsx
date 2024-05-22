@@ -15,14 +15,14 @@ const Home_content = () => {
             </button>
           </div>
           <div className="tpoffcanvas__logo">
-            <a href="index.html">
+            <Link href="/">
               <Image
                 src="/img/logo/logo-white.png"
                 width={100}
                 height={100}
                 alt="forloops logo"
               />
-            </a>
+            </Link>
           </div>
           <div className="tpoffcanvas__text">
             <p>Amplify Your Success, Forloops Unlocks the Power of AI!</p>
@@ -57,50 +57,50 @@ const Home_content = () => {
             <h3 className="offcanva-title">Get In Touch</h3>
             <div className="tp-info-wrapper mb-20 d-flex align-items-center">
               <div className="tpoffcanvas__info-icon">
-                <a href="#">
+                <Link href="#">
                   <i className="fal fa-envelope"></i>
-                </a>
+                </Link>
               </div>
               <div className="tpoffcanvas__info-address">
                 <span>Email</span>
-                <a href="mailto:info@forloops.co">info@forloops.co</a>
+                <Link href="mailto:info@forloops.co">info@forloops.co</Link>
               </div>
             </div>
             <div className="tp-info-wrapper mb-20 d-flex align-items-center">
               <div className="tpoffcanvas__info-icon">
-                <a href="#">
+                <Link href="#">
                   <i className="fal fa-phone-alt"></i>
-                </a>
+                </Link>
               </div>
               <div className="tpoffcanvas__info-address">
                 <span>Phone</span>
-                <a href="tel:+923218414635">+92-321-8414635</a>
+                <Link href="tel:+923218414635">+92-321-8414635</Link>
               </div>
             </div>
             <div className="tp-info-wrapper mb-20 d-flex align-items-center">
               <div className="tpoffcanvas__info-icon">
-                <a href="#">
+                <Link href="#">
                   <i className="fas fa-map-marker-alt"></i>
-                </a>
+                </Link>
               </div>
               <div className="tpoffcanvas__info-address">
                 <span>Location</span>
-                <a
+                <Link
                   href="https://www.google.com/maps/place/701+Tillery+St+12+1646,+Austin,+TX+78702,+USA/"
                   target="_blank"
                 >
                   701 Tillery Street Unit 12-1646
                   <br />
                   Austin, TX 78702, USA
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="tpoffcanvas__social">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/company/98603088/">
+              <Link href="https://www.linkedin.com/company/98603088/">
                 <i className="fab fa-linkedin"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -160,15 +160,15 @@ const Home_content = () => {
                   data-wow-duration=".9s"
                   data-wow-delay=".7s"
                 >
-                  <a
+                  <Link
                     className="tp-btn-blue-square mb-20 mr-25"
                     href="contact.html"
                   >
                     <span>Get Started</span>
-                  </a>
-                  <a className="tp-btn-pink mb-20" href="about.html">
+                  </Link>
+                  <Link className="tp-btn-pink mb-20" href="about.html">
                     <span>Learn More</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div
@@ -613,9 +613,9 @@ const Home_content = () => {
                       competitive edge.
                     </p>
                   </div>
-                  <a className="tp-btn-blue-square" href="contact.html">
+                  <Link className="tp-btn-blue-square" href="contact.html">
                     <span>Get Started</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

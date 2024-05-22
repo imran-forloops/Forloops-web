@@ -1,13 +1,60 @@
+"use client";
+
 import React from "react";
 import Header from "../components/Header";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-const page = () => {
+import "../apolloClient";
+import { Query } from "@apollo/client/react/components";
+import gql from "graphql-tag";
+import { useQuery } from "@apollo/client";
+import { node } from "fontawesome";
+import Link from "next/link";
+
+const POSTS_QUERY = gql`
+  query GetPosts {
+    posts {
+      edges {
+        node {
+          id
+          title
+          content
+          date
+          slug
+
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+          preview {
+            node {
+              id
+            }
+          }
+          postId
+          author {
+            node {
+              id
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+const Page = () => {
+  const { loading, error, data } = useQuery(POSTS_QUERY);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+  console.log("dataa a gya hy", data);
+
   return (
     <>
       <main>
-       
         <div
           className="breadcrumbarea breadcrumb-height p-relative grey-bg"
           style={{
@@ -20,9 +67,9 @@ const page = () => {
           {/* Content inside the div */}
 
           <div className="breadcrumb__scroll-bottom smooth">
-            <a href="#blog">
+            <Link href="#postbox__meta">
               <i className="fa-solid fa-arrow-down"></i>
-            </a>
+            </Link>
           </div>
           <div className="container">
             <div className="row">
@@ -31,7 +78,7 @@ const page = () => {
                   <h3 className="breadcrumb__title">Recent Blog</h3>
                   <div className="breadcrumb__list">
                     <span>
-                      <a href="index.html">Home</a>
+                      <Link href="/">Home</Link>
                     </span>
                     <span className="dvdr">
                       <FontAwesomeIcon icon={faAngleRight} />
@@ -46,77 +93,83 @@ const page = () => {
         {/* <!-- breadcrumb area end --> */}
 
         {/* <!-- postbox area start --> */}
+
         <div className="postbox__area pt-120 pb-120">
           <div className="container">
             <div className="row">
               <div className="col-xxl-8 col-xl-8 col-lg-8">
                 <div id="blog" className="postbox__wrapper pr-20">
-                  <article className="postbox__item format-image mb-50 transition-3">
-                    <div className="postbox__thumb w-img">
-                      <a href="blog-details.html">
-                        <Image
-                          src="/img/blog/article-1.jpg"
-                          width={1000}
-                          height={1000}
-                          className="nextimg"
-                          alt="article-1.jg"
-                        />
-                      </a>
-                    </div>
-                    <div className="postbox__content">
-                      <div className="postbox__meta">
-                        <span>
-                          <i className="fal fa-user-circle"></i> Dr Basit Riaz
-                          Sheikh
-                        </span>
-                        <span>
-                          <i className="fal fa-clock"></i> Jul 20, 2022
-                        </span>
+                  {data.posts.edges.map(({ node }) => (
+                    <article
+                      key={node.id}
+                      className="postbox__item format-image mb-50 transition-3"
+                    >
+                      <div className="postbox__thumb w-img">
+                        <Link href={`/blog/${node.slug}`}>
+                          <Image
+                            src={node.featuredImage?.node?.sourceUrl}
+                            width={1000}
+                            height={1000}
+                            className="nextimg"
+                            alt={node.title}
+                          />
+                        </Link>
                       </div>
-                      <h3 className="postbox__title">
-                        <a href="blog-details.html">
-                          The Magical World of Generative AI in Customer Support
-                        </a>
-                      </h3>
-                      <div className="postbox__text">
-                        <p>
-                          Generative AI, the advanced technology powering
-                          ChatGPT, Google&apos;s Bard, DALL-E, MidJourney, and
-                          an ever-growing list of AI-powered tools, has taken
-                          the world by storm. And quite literally. With its
-                          ability to replicate human-like responses, Generative
-                          AI is the next...
-                        </p>
-                      </div>
-                      <div className="post__button">
-                        <a className="tp-btn-blue-square" href="/blog_details">
-                          <span>READ MORE</span>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
+                      <div className="postbox__content">
+                        <div id="postbox__meta" className="postbox__meta">
+                          <span>
+                            <i className="fal fa-user-circle"></i>
 
+                            {node.author.node.name}
+                          </span>
+                          <span>
+                            <i className="fal fa-clock"></i>
+
+                            {new Date(node.date).toLocaleDateString()}
+                          </span>
+                        </div>
+                        <h3 className="postbox__title">
+                          <Link href={`/blog/${node.slug}`}>{node.title}</Link>
+                        </h3>
+                        <div className="postbox__text">
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: node.content.substring(0, 300),
+                            }}
+                          />
+                        </div>
+                        <div className="post__button">
+                          <Link
+                            className="tp-btn-blue-square"
+                            href={`/blog/${node.slug}`}
+                          >
+                            <span>READ MORE</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
                   <div className="basic-pagination d-none">
                     <nav>
                       <ul>
                         <li>
-                          <a href="blog.html">
+                          <Link href="/blog">
                             <i className="fal fa-arrow-left"></i>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="blog.html">1</a>
+                          <Link href="/blog">1</Link>
                         </li>
                         <li>
                           <span className="current">2</span>
                         </li>
                         <li>
-                          <a href="blog.html">3</a>
+                          <Link href="/blog">3</Link>
                         </li>
                         <li>
-                          <a href="blog.html">
-                            <i className="fal fa-arrow-right"></i>
-                          </a>
+                          <Link href="/blog">
+                            <i className="fa fa-arrow-right"></i>
+                          </Link>
                         </li>
                       </ul>
                     </nav>
@@ -129,7 +182,11 @@ const page = () => {
                     <h3 className="sidebar__widget-title">Search Here</h3>
                     <div className="sidebar__widget-content">
                       <div className="sidebar__search">
-                        <form action="#" method="post" onsubmit="return false;">
+                        <form
+                          action="#"
+                          method="post"
+                          onSubmit={(e) => e.preventDefault()}
+                        >
                           <div className="sidebar__search-input-2">
                             <input
                               type="text"
@@ -150,89 +207,89 @@ const page = () => {
                       <div className="sidebar__post rc__post">
                         <div className="rc__post mb-20 d-flex">
                           <div className="rc__post-thumb mr-20">
-                            <a href="blog-details.html">
+                            <Link href={`/blog/${node.slug}`}>
                               <Image
                                 src="/img/blog/blog-details-sm-1.jpg"
                                 width={100}
                                 height={100}
                                 alt="blog-details-sm-1.jpg"
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="rc__post-content">
                             <div className="rc__meta">
                               <span>4 March. 2022</span>
                             </div>
                             <h3 className="rc__post-title">
-                              <a href="blog-details.html">
+                              <Link href={`/blog/${node.slug}`}>
                                 Don’t Underestimate The Software
-                              </a>
+                              </Link>
                             </h3>
                           </div>
                         </div>
                         <div className="rc__post mb-20 d-flex">
                           <div className="rc__post-thumb mr-20">
-                            <a href="blog-details.html">
+                            <Link href={`/blog/${node.slug}`}>
                               <Image
                                 src="/img/blog/blog-details-sm-2.jpg"
                                 width={100}
                                 height={100}
                                 alt="blog-details-sm-2.jpg"
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="rc__post-content">
                             <div className="rc__meta">
                               <span>4 March. 2022</span>
                             </div>
                             <h3 className="rc__post-title">
-                              <a href="blog-details.html">
+                              <Link href={`/blog/${node.slug}`}>
                                 Designing Human-Machine Interfaces..
-                              </a>
+                              </Link>
                             </h3>
                           </div>
                         </div>
                         <div className="rc__post mb-20 d-flex">
                           <div className="rc__post-thumb mr-20">
-                            <a href="blog-details.html">
+                            <Link href={`/blog/${node.slug}`}>
                               <Image
                                 src="/img/blog/blog-details-sm-3.jpg"
                                 width={100}
                                 height={100}
                                 alt="blog-details-sm-3.jpg"
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="rc__post-content">
                             <div className="rc__meta">
                               <span>4 March. 2022</span>
                             </div>
                             <h3 className="rc__post-title">
-                              <a href="blog-details.html">
+                              <Link href={`/blog/${node.slug}`}>
                                 Web Design Done Well: Excellent
-                              </a>
+                              </Link>
                             </h3>
                           </div>
                         </div>
                         <div className="rc__post mb-20 d-flex">
                           <div className="rc__post-thumb mr-20">
-                            <a href="blog-details.html">
+                            <Link href={`/blog/${node.slug}`}>
                               <Image
                                 src="/img/blog/blog-details-sm-4.jpg"
                                 width={100}
                                 height={100}
                                 alt="blog-details-sm-4.jpg"
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="rc__post-content">
                             <div className="rc__meta">
                               <span>4 March. 2022</span>
                             </div>
                             <h3 className="rc__post-title">
-                              <a href="blog-details.html">
+                              <Link href={`/blog/${node.slug}`}>
                                 Don’t Underestimate The Software{" "}
-                              </a>
+                              </Link>
                             </h3>
                           </div>
                         </div>
@@ -244,52 +301,52 @@ const page = () => {
                     <div className="sidebar__widget-content">
                       <ul>
                         <li>
-                          <a href="blog.html">
+                          <Link href="/blog">
                             Web Design
                             <span>
                               <i className="fal fa-angle-right"></i>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="blog.html">
+                          <Link href="/blog">
                             Branding Design
                             <span>
                               <i className="fal fa-angle-right"></i>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="blog.html">
+                          <Link href="/blog">
                             Photography{" "}
                             <span>
                               <i className="fal fa-angle-right"></i>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="blog.html">
+                          <Link href="/blog">
                             Business Statergy
                             <span>
                               <i className="fal fa-angle-right"></i>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="blog.html">
+                          <Link href="/blog">
                             UI/UX Deisgn
                             <span>
                               <i className="fal fa-angle-right"></i>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="blog.html">
+                          <Link href="/blog">
                             Web Development
                             <span>
                               <i className="fal fa-angle-right"></i>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -298,14 +355,14 @@ const page = () => {
                     <h3 className="sidebar__widget-title">Tags</h3>
                     <div className="sidebar__widget-content">
                       <div className="tagcloud">
-                        <a href="#">Artificial Intelligence</a>
-                        <a href="#">LLM</a>
-                        <a href="#">Generative AI</a>
-                        <a href="#">ChatGPT</a>
-                        <a href="#">OpenAI</a>
-                        <a href="#">Machine Learning</a>
-                        <a href="#">Bard</a>
-                        <a href="#">DALL-E</a>
+                        <Link href="#">Artificial Intelligence</Link>
+                        <Link href="#">LLM</Link>
+                        <Link href="#">Generative AI</Link>
+                        <Link href="#">ChatGPT</Link>
+                        <Link href="#">OpenAI</Link>
+                        <Link href="#">Machine Learning</Link>
+                        <Link href="#">Bard</Link>
+                        <Link href="#">DALL-E</Link>
                       </div>
                     </div>
                   </div>
@@ -314,10 +371,11 @@ const page = () => {
             </div>
           </div>
         </div>
+
         {/* <!-- postbox area end --> */}
       </main>
     </>
   );
 };
 
-export default page;
+export default Page;
