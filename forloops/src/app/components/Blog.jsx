@@ -1,25 +1,65 @@
 "use client";
-
-import Image from "next/image";
 import React from "react";
+import { useQuery } from "@apollo/client";
+import gql from "graphql-tag";
+import Image from "next/image";
+import Link from "next/link";
+
+const GET_POSTS = gql`
+  query GetPosts {
+    posts {
+      edges {
+        node {
+          id
+          title
+          content
+          date
+          slug
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+          author {
+            node {
+              id
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Blog = () => {
+  const { loading, error, data } = useQuery(GET_POSTS);
+
+  if (loading) return <p>Loading posts...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  // Create a new array before sorting
+  const sortedPosts = [...data.posts.edges].sort(
+    (a, b) => new Date(b.node.date) - new Date(a.node.date)
+  );
+
+  const latestPost = sortedPosts[0].node;
+
   return (
     <>
-      {/* <!-- tp-blog-area-start --> */}
       <div className="tp-blog__area grey-bg pt-120 pb-120">
         <div className="container">
-          <div className="row">
+          <div class="row">
             <div
-              className="col-12 wow tpfadeUp"
+              class="col-12 wow tpfadeUp"
               data-wow-duration=".9s"
               data-wow-delay=".3s"
             >
-              <div className="tp-blog__section-box d-flex justify-content-between align-items-center">
-                <h3 className="tp-section-title-md">Read our recent blog</h3>
-                <a className="tp-btn-blue-square" href="blog.html">
+              <div class="tp-blog__section-box d-flex justify-content-between align-items-center">
+                <h3 class="tp-section-title-md">Read our recent blog</h3>
+                <Link class="tp-btn-blue-square" href="/blog">
                   <span>See all Blog</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -31,9 +71,9 @@ const Blog = () => {
             >
               <div className="tp-blog__item">
                 <div className="tp-blog__thumb fix">
-                  <a href="blog-details.html">
+                  <a href={`blog/${latestPost.slug}`}>
                     <Image
-                      src="/img/blog/article-1.jpg"
+                      src={latestPost.featuredImage.node.sourceUrl}
                       width={200}
                       height={200}
                       className="nextimg"
@@ -42,55 +82,15 @@ const Blog = () => {
                   </a>
                 </div>
                 <div className="tp-blog__content-wrapper">
-                  <div className="tp-blog__tag">
-                    <span>Article</span>
-                  </div>
                   <div className="tp-blog__content">
                     <h3 className="tp-blog__title">
-                      <a href="blog-details.html">
-                        The Magical World of Generative AI in Customer Support
-                      </a>
+                      <a href={`blog/${latestPost.slug}`}>{latestPost.title}</a>
                     </h3>
-                    <p>
-                      Generative AI, the advanced technology powering ChatGPT,
-                      Google &apos; s Bard, DALL-E, MidJourney, and an
-                      ever-growing list of AI-powered tools, has taken the world
-                      by storm...
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-6 col-lg-6 mb-30 wow tpfadeRight d-none"
-              data-wow-duration=".9s"
-              data-wow-delay=".7s"
-            >
-              <div className="tp-blog__item">
-                <div className="tp-blog__thumb fix">
-                  <a href="blog-details.html">
-                    <Image
-                      src="/img/blog/blog-2.jpg"
-                      width={200}
-                      height={200}
-                      alt="blog2"
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: latestPost.content.substring(0, 200),
+                      }}
                     />
-                  </a>
-                </div>
-                <div className="tp-blog__content-wrapper">
-                  <div className="tp-blog__tag">
-                    <span>Design</span>
-                  </div>
-                  <div className="tp-blog__content">
-                    <h3 className="tp-blog__title">
-                      <a href="blog-details.html">
-                        Is your company facing a social media crisis?
-                      </a>
-                    </h3>
-                    <p>
-                      Specialize in designing, building, shipping and scaling{" "}
-                      <br /> beautiful, usable products with blazing-fast
-                    </p>
                   </div>
                 </div>
               </div>
@@ -98,7 +98,6 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      {/* <!-- tp-blog-area-end --> */}
     </>
   );
 };

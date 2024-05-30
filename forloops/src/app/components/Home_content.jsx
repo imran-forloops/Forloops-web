@@ -162,11 +162,11 @@ const Home_content = () => {
                 >
                   <Link
                     className="tp-btn-blue-square mb-20 mr-25"
-                    href="contact.html"
+                    href="/contact"
                   >
                     <span>Get Started</span>
                   </Link>
-                  <Link className="tp-btn-pink mb-20" href="about.html">
+                  <Link className="tp-btn-pink mb-20" href="/about">
                     <span>Learn More</span>
                   </Link>
                 </div>
@@ -613,7 +613,7 @@ const Home_content = () => {
                       competitive edge.
                     </p>
                   </div>
-                  <Link className="tp-btn-blue-square" href="contact.html">
+                  <Link className="tp-btn-blue-square" href="/contact">
                     <span>Get Started</span>
                   </Link>
                 </div>

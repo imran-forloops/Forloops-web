@@ -97,7 +97,9 @@ export default function RootLayout({ children }) {
           <Preloader />
           {/* <!-- preloader end  --> */}
           <Header />
-          <ApolloWrapper>{children}</ApolloWrapper>
+          <ApolloWrapper>
+           {children}
+          </ApolloWrapper>
           <Footer />
           {/* </ApolloProvider> */}
           <Script

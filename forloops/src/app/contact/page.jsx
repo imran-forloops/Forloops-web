@@ -56,9 +56,8 @@ const page = () => {
                     href="https://www.google.com/maps/place/701+Tillery+St+12+1646,+Austin,+TX+78702,+USA/"
                     target="_blank"
                   >
-                    701 Tillery Street Unit 12-1646
-                    <br />
-                    Austin, TX 78702, USA
+                    701 Tillery Street Unit 12-1646 Austin, TX 78702, USA
+                    
                   </a>
                 </span>
               </div>

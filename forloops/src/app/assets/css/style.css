@@ -322,6 +322,8 @@ input[type="color"] {
 ---------------------------------*/
 .w-img img {
   width: 100%;
+  object-fit: contain;
+  min-height: auto;
 }
 
 .m-img img {
@@ -5696,6 +5698,8 @@ a {
   width: 100%;
   border-radius: 10px;
   transition: 0.5s;
+  min-height: auto;
+  object-fit: contain;
 }
 .tp-blog__tag {
   margin-bottom: 25px;
@@ -5850,6 +5854,9 @@ a {
   margin-bottom: 30px;
   max-width: 100%;
   border-radius: 10px;
+  min-height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px),
   (max-width: 767px) {

@@ -109,7 +109,7 @@ const BlogPost = () => {
                     <p>
                       <Image
                         src={post.featuredImage.node.sourceUrl}
-                        width={400}
+                        width={800}
                         height={300}
                         // className="nextimg"
                         alt="article-"
